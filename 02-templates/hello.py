@@ -5,9 +5,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/user/<name>/<age>')
-def user(name,age):
-    return render_template('user.html', name=name, age=age)
+@app.route('/user/<name>/<age>/<hn>/<ha>/<sn>')
+def user(name,age,hn,ha,sn):
+    return render_template('user.html', name=name, age=age, hn=hn, ha=ha, sn=sn)
 
 if __name__ == '__main__':
     app.run(debug=True)
